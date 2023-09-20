@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan Form</title>
+    <style>
+        body {
+            background-color: #ffe1e6; /* Light pink background */
+            font-family: 'Cascadia Code', monospace; /* Set the font family for the rest of the text */
+        }
+        h1 {
+            font-family: 'Broadway', cursive; /* Set the font family to Broadway */
+            color: #ff66b2; /* Barbie pink text color */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff; /* White background for the table */
+            border: 2px solid #ff66b2; /* Barbie pink border */
+        }
+        td {
+            padding: 10px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ff66b2; /* Barbie pink border */
+            border-radius: 5px;
+            background-color: #fff; /* White background for input fields */
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('arrow.png') no-repeat right; /* Add an arrow image for select fields */
+        }
+        input[type="file"] {
+            border: none;
+            background-color: transparent;
+        }
+        input[type="submit"] {
+            background-color: #ff66b2; /* Barbie pink submit button color */
+            color: #fff; /* White text color for submit button */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            background-color: #f5a3b6; /* Light pink reset button color */
+            color: #fff; /* White text color for reset button */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Font style for buttons, textboxes, radio buttons, checkboxes, and select elements */
+        input[type="button"],
+        input[type="radio"],
+        input[type="checkbox"],
+        input[type="text"],
+        select,
+        label.checkbox-label {
+            font-family: 'Candara Light', monospace; /* Set the font family for these elements */
+        }
+    </style>
+</head>
+<body>
+    <form action="Biodata.php" method = "POST" enctype ="multipart/form-data">
+		<table align = 'center'>
+			<tr align ='center'>
+				<td colspan = '3'><h1>Pendaftaran </strong></h1><br></td>
+			</tr>
+			<tr>
+				<td>First name</td>
+				<td>:</td>
+				<td><input type = "text" name = "first_name"></td>
+			</tr>
+			<tr>
+				<td>Last name</td>
+				<td>:</td>
+				<td><input type = "text" name = "last_name" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>:</td>
+				<td><input type = "text" name = "password" /></td>
+			</tr>
+			<tr>
+				<td>Religion</td>
+				<td>:</td>
+				<td>
+					<select name = "dropdown">
+						<option value = "Catholic" selected>Catholic</option>
+						<option value = "Protestan">Protestan</option>
+						<option value = "Buddhism">Buddhism</option>
+						<option value = "Hinduism">Hinduism</option>
+						<option value = "Muslim">Muslim</option>
+						<option value = "Khonghucu">Khonghucu</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td>:</td>
+				<td><input type = "text" name = "Number"/ value ="+62"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>:</td>
+				<td><input type = "text" name = "email" /></td>
+			</tr>
+			<tr>
+				<td>Date of Birth</td>
+				<td>:</td>
+				<td><input type = "date" name = "birthday"/></td>
+			</tr>
+			<tr>
+				<td>Height</td>
+				<td>:</td>
+				<td><input type = "number" name = "height"/></td>
+			</tr>
+			<tr>
+				<td>Weight</td>
+				<td>:</td>
+				<td><input type = "number" name = "Weight"/></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td>:</td>
+				<td><input type = "number" name = "age"/></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td>:</td>
+				<td>
+					<textarea rows = "5" cols = "50" name = "description">
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>Nationality</td>
+				<td>:</td>
+				<td>
+					<input type = "radio" name = "subject" value = "WNI"> WNI
+					<input type = "radio" name = "subject" value = "WNA"> WNA
+				</td>
+			</tr>
+			<tr>
+				<td>Marriage Status</td>
+				<td>:</td>
+				<td>
+					<input type = "radio" name = "subject" value = "Married"> Married
+					<input type = "radio" name = "subject" value = "Single"> Single
+				</td>
+			</tr>
+			<tr>
+				<td>Hobbies</td>
+				<td>:</td>
+				<td>
+					<input type = "checkbox" name = "music" value = "on"> Music
+					<input type = "checkbox" name = "sports" value = "on"> Sports
+					<input type = "checkbox" name = "arts" value = "on"> Arts
+				</td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>:</td>
+				<td>
+					<input type = "radio" name = "subject" value = "male"> Male
+					<input type = "radio" name = "subject" value = "female"> Female
+				</td>
+			</tr>
+			<tr>
+				<td>Major</td>
+				<td>:</td>
+				<td>
+					<select name = "dropdown">
+						<option value = "Information System" selected>Information System</option>
+						<option value = "Informatics">Informatics</option>
+						<option value = "Information Technology">Information Technology</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Photo</td>
+				<td>:</td>
+				<td>
+					<input type = "file" name = "fileupload" accept = "image/*" /> 
+					<!-- ini kwa tu * to say that all file type is ok -->
+				</td>
+			</tr>
+			<tr>
+				<td>Father's Name</td>
+				<td>:</td>
+				<td><input type = "text" name = "F_Name" /></td>
+			</tr>
+			<tr>
+				<td>Mother's Name</td>
+				<td>:</td>
+				<td><input type = "text" name = "M_name" /></td>
+			</tr>
+			<tr>
+				<td>Parent's Address</td>
+				<td>:</td>
+				<td>
+					<textarea rows = "5" cols = "50" name = "description">
+					</textarea>
+				</td>
+			</tr>
+			<tr align = 'right'>
+				<td><input type="reset" name="reset" value="Reset"></td>
+				<td></td>
+				<td>
+					<input type = "submit" name = "submit" value = "Submit" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
